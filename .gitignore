@@ -1,0 +1,7 @@
+# Claude session files
+.claude/
+
+# Private content
+Plans/
+*.md
+!README.md
