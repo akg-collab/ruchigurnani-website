@@ -532,6 +532,18 @@
             background: rgba(255,255,255,0.2);
         }
 
+        .stat-item-link {
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .stat-item-link:hover {
+            transform: scale(1.08);
+            opacity: 0.95;
+        }
+
         /* ============================================
            WHY CHOOSE RUCHI - SUPER VIBRANT
         ============================================ */
@@ -577,15 +589,25 @@
         }
 
         .why-ruchi .section-subtitle {
-            color: rgba(255, 255, 255, 0.9);
+            color: white;
             background: rgba(255, 107, 74, 0.3);
             border-color: rgba(255, 107, 74, 0.5);
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 700;
+            padding: 0.75rem 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .why-ruchi h2 {
             margin-bottom: 3rem;
-            color: white;
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
         }
 
         .why-ruchi-grid {
@@ -714,11 +736,24 @@
         }
 
         .about-image {
-            border-radius: 20px;
+            position: relative;
+            border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
             overflow: hidden;
             box-shadow:
                 0 25px 80px rgba(13, 79, 79, 0.2),
                 0 10px 30px rgba(255, 107, 74, 0.1);
+        }
+
+        /* Decorative frame for about image */
+        .about-image::before {
+            content: '';
+            position: absolute;
+            inset: -15px;
+            border: 3px solid var(--coral);
+            border-radius: inherit;
+            opacity: 0.5;
+            z-index: -1;
+            background: linear-gradient(225deg, rgba(255, 107, 74, 0.1) 0%, transparent 100%);
         }
 
         .about-image img {
@@ -2068,7 +2103,7 @@
             </div>
             <div class="hero-image-wrapper">
                 <div class="hero-image">
-                    <img src="Pictures/IMG20250316142245.jpg" alt="Ruchi Gurnani - Nutritionist & Wellness Coach">
+                    <img src="Pictures/Square Fit_202212312152874.jpg" alt="Ruchi Gurnani - Nutritionist & Wellness Coach">
                 </div>
             </div>
         </div>
@@ -2078,58 +2113,107 @@
     <section class="stats-bar">
         <div class="stats-container">
             <div class="stat-item">
-                <div class="stat-number">10+</div>
+                <div class="stat-number">11+</div>
                 <div class="stat-label">Years Experience</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">1000+</div>
                 <div class="stat-label">Happy Clients</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">4.9</div>
-                <div class="stat-label">Google Rating</div>
-            </div>
+            <a href="https://www.google.com/maps/place/Ruchi+Gurnani+-+Nutritionist+%26+Dietitian/@28.6562051,77.1022132,17z/data=!4m8!3m7!1s0x390d04df1339b8e1:0x81bf5fbb9e324f8b!8m2!3d28.6562051!4d77.1047881!9m1!1b1!16s%2Fg%2F11h713d7kq" target="_blank" rel="noopener noreferrer" class="stat-item stat-item-link" title="See our Google Reviews">
+                <div class="stat-number">4.9 ⭐</div>
+                <div class="stat-label">Google Rating →</div>
+            </a>
         </div>
     </section>
 
-    <!-- Why Choose Ruchi -->
+    <!-- Why Choose Ruchi - Consolidated Section -->
     <section class="why-ruchi">
         <div class="why-ruchi-container">
-            <span class="section-subtitle">Why Clients Love Working With Me</span>
-            <h2>The Ruchi Difference ✨</h2>
+            <span class="section-subtitle">Your Body Deserves a Plan Made Just for You</span>
+            <h2>Your health journey is personal—your nutrition plan should be too.<br>Crafted with care, designed for results.</h2>
 
             <div class="why-ruchi-grid">
-                    <div class="why-card">
-                        <div class="why-icon">📱</div>
-                        <h3>100% WhatsApp Based</h3>
-                        <p>No apps to download, no clinic visits. Everything on WhatsApp!</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon">🍛</div>
-                        <h3>Indian Kitchen Friendly</h3>
-                        <p>Real recipes your family will love. No exotic ingredients.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon">📋</div>
-                        <h3>Exact Portions in Grams</h3>
-                        <p>No guesswork! Precise quantities for guaranteed results.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon">🎁</div>
-                        <h3>Free 3-Day Trial</h3>
-                        <p>Try before you commit. Zero pressure, just results.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon">💬</div>
-                        <h3>Direct Access to Ruchi</h3>
-                        <p>Message me anytime. No assistants, no bots!</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon">🍕</div>
-                        <h3>"Free Dinner" Days</h3>
-                        <p>Built-in flexibility. Enjoy life while losing weight!</p>
-                    </div>
+                <!-- Experience -->
+                <div class="why-card">
+                    <div class="why-icon">🏆</div>
+                    <h3>11+ Years Experience</h3>
+                    <p>Over a decade of helping people transform their health and lives.</p>
                 </div>
+
+                <!-- Results -->
+                <div class="why-card">
+                    <div class="why-icon">👥</div>
+                    <h3>1000+ Happy Clients</h3>
+                    <p>Trusted by thousands across Delhi NCR and beyond.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">⭐</div>
+                    <h3>4.9★ Google Rating</h3>
+                    <p>Consistently rated excellent by real clients.</p>
+                </div>
+
+                <!-- Process -->
+                <div class="why-card">
+                    <div class="why-icon">📱</div>
+                    <h3>100% WhatsApp Based</h3>
+                    <p>No apps to download, no clinic visits. Everything on WhatsApp!</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🏠</div>
+                    <h3>No Apps or Clinic Visits</h3>
+                    <p>Get expert guidance from the comfort of your home.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🎁</div>
+                    <h3>Free 3-Day Trial</h3>
+                    <p>Try before you commit. Zero pressure, just results.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🤝</div>
+                    <h3>Regular Follow-ups</h3>
+                    <p>Consistent check-ins to track progress and keep you motivated.</p>
+                </div>
+
+                <!-- Plan Details -->
+                <div class="why-card">
+                    <div class="why-icon">📅</div>
+                    <h3>Day-by-Day Personalized Plans</h3>
+                    <p>Complete daily schedules crafted specifically for your body.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🕐</div>
+                    <h3>9 Meal Timings Per Day</h3>
+                    <p>From early morning to bedtime—every meal planned out.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">⚖️</div>
+                    <h3>Exact Portions in Grams</h3>
+                    <p>No guesswork! Precise quantities for guaranteed results.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">📖</div>
+                    <h3>Quick Recipe Sheets</h3>
+                    <p>Every meal comes with easy step-by-step recipes.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🍛</div>
+                    <h3>Indian Kitchen Friendly</h3>
+                    <p>Real recipes your family will love. No exotic ingredients.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🍕</div>
+                    <h3>"Free Dinner" Flexibility</h3>
+                    <p>Built-in flexibility days. Enjoy life while losing weight!</p>
+                </div>
+
+                <!-- Accolades -->
+                <div class="why-card">
+                    <div class="why-icon">📺</div>
+                    <h3>CNBC Awaaz Featured</h3>
+                    <p>Recognized by national media for expertise in nutrition.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2138,7 +2222,7 @@
         <div class="about-container">
             <div class="about-image-wrapper">
                 <div class="about-image">
-                    <img src="Pictures/Square Fit_202212312152874.jpg" alt="Ruchi Gurnani - Nutritionist">
+                    <img src="Pictures/IMG20250316142245.jpg" alt="Ruchi Gurnani - Nutritionist">
                 </div>
                 <div class="about-decor"></div>
             </div>
@@ -2162,67 +2246,6 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
                         CNBC Awaaz Featured
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What You Get -->
-    <section class="what-you-get" id="what-you-get">
-        <div class="wyg-container">
-            <div class="wyg-header">
-                <span class="section-subtitle">What Makes Me Different</span>
-                <h2>Your Personalized Diet Plan Includes</h2>
-                <p>Not generic templates. Every plan is crafted specifically for YOU.</p>
-            </div>
-
-            <div class="wyg-grid">
-                <div class="wyg-card">
-                    <div class="wyg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    </div>
-                    <h3>Day-by-Day Meal Plans</h3>
-                    <p>Complete daily schedules with 9 meal timings - from early morning to bedtime. No guesswork.</p>
-                </div>
-
-                <div class="wyg-card">
-                    <div class="wyg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                    </div>
-                    <h3>Exact Portions in Grams</h3>
-                    <p>Precise measurements so you know exactly what to eat. No vague "a cup" or "medium bowl".</p>
-                </div>
-
-                <div class="wyg-card">
-                    <div class="wyg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                    </div>
-                    <h3>20+ Recipe Sheets</h3>
-                    <p>Quick, healthy recipes with step-by-step instructions. Chilla, dosa, khichdi, smoothies & more.</p>
-                </div>
-
-                <div class="wyg-card">
-                    <div class="wyg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-                    </div>
-                    <h3>Indian Kitchen Friendly</h3>
-                    <p>Plans designed around foods you already know and love. No exotic ingredients needed.</p>
-                </div>
-
-                <div class="wyg-card">
-                    <div class="wyg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    </div>
-                    <h3>"Free Dinner" Flexibility</h3>
-                    <p>Planned flexibility days so you can enjoy social occasions without guilt.</p>
-                </div>
-
-                <div class="wyg-card">
-                    <div class="wyg-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    </div>
-                    <h3>Regular Follow-ups</h3>
-                    <p>Consistent check-ins to track progress, adjust plans, and keep you motivated.</p>
                 </div>
             </div>
         </div>
@@ -2346,12 +2369,12 @@
                 <div class="testimonial-card">
                     <div class="testimonial-emoji">🎉</div>
                     <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Lost <span class="testimonial-highlight">12 kgs in 3 months</span> without feeling hungry! The recipes are so easy and tasty. Best decision of my life!"</p>
+                    <p class="testimonial-text">"Ruchi is the most promising dietician I have ever met. I have taken diet plans from other dieticians as well but none could make me loose more than 3-4 kgs. <span class="testimonial-highlight">Loosing 15 kgs</span> of weight in total was miraculous for me. Super nice human and best dietitian"</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">P</div>
+                        <div class="author-avatar">G</div>
                         <div class="author-info">
-                            <h4>Priya Sharma</h4>
-                            <p>Lost 12 kgs ✨</p>
+                            <h4>Garima Sachdeva</h4>
+                            <p>Lost 15 kgs ✨</p>
                         </div>
                     </div>
                 </div>
@@ -2359,39 +2382,12 @@
                 <div class="testimonial-card">
                     <div class="testimonial-emoji">💃</div>
                     <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Finally someone who understands <span class="testimonial-highlight">PCOS</span>! Hormones balanced, energy up, and I feel amazing. Thank you Ruchi ma'am!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">A</div>
-                        <div class="author-info">
-                            <h4>Anita Verma</h4>
-                            <p>PCOS Warrior 💪</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-emoji">🩺</div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Exact portions in grams made it so simple! My <span class="testimonial-highlight">sugar levels are under control</span>. Doctor was impressed!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">R</div>
-                        <div class="author-info">
-                            <h4>Rajesh Kumar</h4>
-                            <p>Diabetes Control 🎯</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Row 2 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-emoji">📱</div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"<span class="testimonial-highlight">WhatsApp support</span> is incredible! Any doubt, any time - Ruchi ma'am replies so quickly. Like having a nutritionist in your pocket!"</p>
+                    <p class="testimonial-text">"I have been taking Ruchi Maam's Diet plan for 3 months now and I have <span class="testimonial-highlight">lost almost 12 kgs</span>. She does not only focus on weight loss but she would take care of all your health problems, for e.g I have <span class="testimonial-highlight">PCOD</span> and gastric issues. She has become more of a family member now ❤️"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">S</div>
                         <div class="author-info">
-                            <h4>Sneha Gupta</h4>
-                            <p>Weight Loss Journey 🌟</p>
+                            <h4>Satakshi Agarwal</h4>
+                            <p>PCOD + Lost 12 kgs 💪</p>
                         </div>
                     </div>
                 </div>
@@ -2399,132 +2395,26 @@
                 <div class="testimonial-card">
                     <div class="testimonial-emoji">⚡</div>
                     <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"<span class="testimonial-highlight">Thyroid improved in 2 months</span>! The Indian recipes fit perfectly with family meals. No separate cooking needed!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">M</div>
-                        <div class="author-info">
-                            <h4>Meera Joshi</h4>
-                            <p>Thyroid Support 💊</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-emoji">🏆</div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"<span class="testimonial-highlight">Free 3-day trial</span> convinced me. No pressure, just results. Lost 8 kgs and counting! Highly professional."</p>
+                    <p class="testimonial-text">"Ruchi is one of the best dieticians I have know. She not only helped me in <span class="testimonial-highlight">reducing 10kgs in less than 2 months</span> but also helped me in chronic pain management. Her plans are easy to follow and she customises everything according to your schedule and habits."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">V</div>
                         <div class="author-info">
-                            <h4>Vikram Singh</h4>
-                            <p>Lost 8 kgs 🔥</p>
+                            <h4>Vaishnavi Lamba</h4>
+                            <p>Lost 10 kgs 🔥</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Row 3 -->
+                <!-- Row 2 -->
                 <div class="testimonial-card">
-                    <div class="testimonial-emoji">👩‍👧</div>
+                    <div class="testimonial-emoji">🏆</div>
                     <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Post-pregnancy weight gone! <span class="testimonial-highlight">Lost 15 kgs</span> while ensuring proper nutrition for breastfeeding. Ruchi ma'am is a blessing!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">K</div>
-                        <div class="author-info">
-                            <h4>Kavita Malhotra</h4>
-                            <p>New Mom 👶</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-emoji">🏋️</div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"As a gym enthusiast, needed proper <span class="testimonial-highlight">protein-rich vegetarian plan</span>. Muscle gain + fat loss achieved! Perfect balance."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">A</div>
-                        <div class="author-info">
-                            <h4>Amit Rawat</h4>
-                            <p>Fitness Goals 💪</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-emoji">👵</div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"At 58, managed to <span class="testimonial-highlight">reduce cholesterol naturally</span>. The recipes are simple and my whole family enjoys them!"</p>
+                    <p class="testimonial-text">"Ruchi mam is a highly recommended dietician. Providing a personalized nutrition plan and incredibly supportive. Her diet plans are very simple and easy to cook. <span class="testimonial-highlight">I lost 13 kgs</span> in short span. Thank you Ruchi mam 😀❤️"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">S</div>
                         <div class="author-info">
-                            <h4>Sunita Agarwal</h4>
-                            <p>Heart Health ❤️</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Row 4 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-emoji">💼</div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Busy corporate life, no time to cook elaborate meals. Ruchi ma'am gave me <span class="testimonial-highlight">quick 15-min recipes</span>. Lost 10 kgs!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">N</div>
-                        <div class="author-info">
-                            <h4>Neeraj Kapoor</h4>
-                            <p>Working Professional 📊</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-emoji">🌸</div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Wedding in 4 months - needed to look my best! <span class="testimonial-highlight">Lost 9 kgs</span>, skin glowing, confidence through the roof. Thank you!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">P</div>
-                        <div class="author-info">
-                            <h4>Pooja Mehta</h4>
-                            <p>Bridal Glow 👰</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-emoji">🎓</div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Student budget, hostel life - thought healthy eating was impossible. Ruchi ma'am's <span class="testimonial-highlight">budget-friendly plan</span> proved me wrong!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">R</div>
-                        <div class="author-info">
-                            <h4>Rohan Saxena</h4>
-                            <p>College Student 📚</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Row 5 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-emoji">🧘</div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"<span class="testimonial-highlight">Bloating and acidity gone</span>! The gut-friendly meal plan transformed my digestion. Sleeping better, feeling lighter!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">D</div>
-                        <div class="author-info">
-                            <h4>Deepika Rao</h4>
-                            <p>Gut Health 🌿</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-emoji">👨‍👩‍👧‍👦</div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"<span class="testimonial-highlight">Whole family on healthy diet</span> now! Kids love the recipes, husband lost his belly. One plan, entire family benefited!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">R</div>
-                        <div class="author-info">
-                            <h4>Rashmi Bansal</h4>
-                            <p>Family Wellness 🏠</p>
+                            <h4>Santosh Verma</h4>
+                            <p>Lost 13 kgs 🎯</p>
                         </div>
                     </div>
                 </div>
@@ -2532,12 +2422,65 @@
                 <div class="testimonial-card">
                     <div class="testimonial-emoji">🌟</div>
                     <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"From size XL to M! <span class="testimonial-highlight">18 kgs down</span> in 6 months. The 'free dinner' days kept me motivated. Life-changing experience!"</p>
+                    <p class="testimonial-text">"<span class="testimonial-highlight">I lost 15 kg</span> with the help and guidance of Ruchi Gurnani. Easy, quick to make recipes and tasty option is Ruchi's USP. At times I felt am I really doing a diet because of the yummy option given in diet chart. My life has changed 360 degree."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">S</div>
                         <div class="author-info">
-                            <h4>Sanjay Bhatia</h4>
-                            <p>Transformation 🦋</p>
+                            <h4>Shirin Tehlan</h4>
+                            <p>Lost 15 kgs 🌟</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-emoji">👩‍👧</div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Being a working mother it was difficult to make special meals for ourselves but Ruchi made it possible by suggesting meals which can be cooked daily and for the whole family members too. <span class="testimonial-highlight">I lost 9 to 10 kgs in just two months</span>. She gave me many cheat days too!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">C</div>
+                        <div class="author-info">
+                            <h4>Chhavi Sharma</h4>
+                            <p>Working Mom 💼</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-emoji">👧</div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"I reached out to Ruchi for my <span class="testimonial-highlight">teenage daughter struggling with hair loss</span> due to nutritional deficiencies. She gave a varied yet balanced meal plan with options to eat chicken burger, dimsums and pizza too that my daughter absolutely loved!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">D</div>
+                        <div class="author-info">
+                            <h4>Dilpreet Kaur</h4>
+                            <p>Teenager Health 🌸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-emoji">📱</div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"I had an amazing experience with Ruchi! Over the past three months, <span class="testimonial-highlight">I've lost 12 kg</span>. What I truly appreciate is her flexibility—She understands individual needs. Her quick responses made it easy to stay on track. I highly recommend Ruchi!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">U</div>
+                        <div class="author-info">
+                            <h4>Utsav Mishra</h4>
+                            <p>Lost 12 kgs 🔥</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-emoji">❤️</div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"I've been following this weight loss diet for a few months now, and I'm genuinely impressed with the results. The plan is easy to follow with a variety of delicious and satisfying meals. <span class="testimonial-highlight">The portions are just right</span>, and it doesn't leave me feeling hungry or deprived."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">H</div>
+                        <div class="author-info">
+                            <h4>Huma Vohra</h4>
+                            <p>Wellness Journey ❤️</p>
                         </div>
                     </div>
                 </div>

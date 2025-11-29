@@ -1,0 +1,30 @@
+DNS SETTINGS FOR www.ruchigurnani.com
+=====================================
+Add these records in HostingRaja DNS settings:
+
+CNAME RECORD:
+-------------
+Type:  CNAME
+Name:  www
+Value: akg-collab.github.io
+
+A RECORDS (add all 4):
+----------------------
+Type:  A
+Name:  @
+Value: 185.199.108.153
+
+Type:  A
+Name:  @
+Value: 185.199.109.153
+
+Type:  A
+Name:  @
+Value: 185.199.110.153
+
+Type:  A
+Name:  @
+Value: 185.199.111.153
+
+=====================================
+After adding, let me know to configure GitHub!
