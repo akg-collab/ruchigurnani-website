@@ -589,25 +589,37 @@
         }
 
         .why-ruchi .section-subtitle {
+            display: inline-block;
             color: white;
-            background: rgba(255, 107, 74, 0.3);
-            border-color: rgba(255, 107, 74, 0.5);
-            font-size: clamp(1.5rem, 3vw, 2.2rem);
-            font-weight: 700;
-            padding: 0.75rem 1.5rem;
-            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--coral) 0%, var(--coral-bright) 100%);
+            border: none;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            padding: 1rem 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 40px rgba(255, 107, 74, 0.4);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: -0.02em;
         }
 
         .why-ruchi h2 {
-            margin-bottom: 3rem;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            font-weight: 400;
-            line-height: 1.6;
-            max-width: 700px;
+            margin-bottom: 3.5rem;
+            color: white;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            font-weight: 500;
+            line-height: 1.7;
+            max-width: 750px;
             margin-left: auto;
             margin-right: auto;
-            text-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+            opacity: 0.95;
+        }
+
+        .why-ruchi h2 br {
+            display: block;
+            content: "";
+            margin-top: 0.5rem;
         }
 
         .why-ruchi-grid {
@@ -2160,9 +2172,9 @@
                     <p>No apps to download, no clinic visits. Everything on WhatsApp!</p>
                 </div>
                 <div class="why-card">
-                    <div class="why-icon">🏠</div>
-                    <h3>No Apps or Clinic Visits</h3>
-                    <p>Get expert guidance from the comfort of your home.</p>
+                    <div class="why-icon">💬</div>
+                    <h3>Direct Access to Ruchi</h3>
+                    <p>No assistants, no bots—message me directly.</p>
                 </div>
                 <div class="why-card">
                     <div class="why-icon">🎁</div>
@@ -2173,6 +2185,11 @@
                     <div class="why-icon">🤝</div>
                     <h3>Regular Follow-ups</h3>
                     <p>Consistent check-ins to track progress and keep you motivated.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">📍</div>
+                    <h3>Delhi NCR + Online</h3>
+                    <p>In-person or remote—your choice, same great results.</p>
                 </div>
 
                 <!-- Plan Details -->
@@ -2206,12 +2223,10 @@
                     <h3>"Free Dinner" Flexibility</h3>
                     <p>Built-in flexibility days. Enjoy life while losing weight!</p>
                 </div>
-
-                <!-- Accolades -->
                 <div class="why-card">
-                    <div class="why-icon">📺</div>
-                    <h3>CNBC Awaaz Featured</h3>
-                    <p>Recognized by national media for expertise in nutrition.</p>
+                    <div class="why-icon">🚫</div>
+                    <h3>No Crash Diets</h3>
+                    <p>Sustainable eating, not starvation. Lose weight without suffering.</p>
                 </div>
             </div>
         </div>
