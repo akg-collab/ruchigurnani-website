@@ -216,39 +216,79 @@
 
         .logo {
             display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #0d7a7a 0%, #0a5858 100%);
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(10, 88, 88, 0.35);
+            flex-shrink: 0;
+        }
+
+        .logo-icon .initials {
+            font-family: var(--font-body);
+            font-size: 17px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .logo-icon .bar {
+            width: 24px;
+            height: 2.5px;
+            background: var(--coral);
+            border-radius: 1px;
+            margin-top: 3px;
+        }
+
+        .logo-divider {
+            width: 1px;
+            height: 42px;
+            background: #ccc;
+        }
+
+        .logo-text {
+            display: flex;
             flex-direction: column;
         }
 
         .logo-name {
             font-family: var(--font-heading);
-            font-size: 1.65rem;
+            font-size: 1.5rem;
             font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        .logo-name .first {
             color: var(--teal-deep);
-        }
-
-        .logo-name .last {
-            color: var(--coral);
-            margin-left: 6px;
-        }
-
-        .logo-line {
-            width: 60px;
-            height: 2px;
-            background: var(--coral);
-            margin: 4px 0;
+            line-height: 1.1;
         }
 
         .logo-tagline {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .logo-tagline span {
             font-family: var(--font-body);
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             font-weight: 600;
-            color: var(--teal-deep);
+            color: var(--coral);
             letter-spacing: 1.5px;
             text-transform: uppercase;
+        }
+
+        .logo-tagline .dot {
+            width: 4px;
+            height: 4px;
+            background: var(--teal-bright);
+            border-radius: 50%;
         }
 
         .nav-links {
@@ -1870,32 +1910,78 @@
 
         .footer-logo-wrap {
             display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .footer-logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #0d7a7a 0%, #0a5858 100%);
+            border-radius: 6px;
+            display: flex;
             flex-direction: column;
-            gap: 6px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(10, 88, 88, 0.4);
+            flex-shrink: 0;
+        }
+
+        .footer-logo-icon .initials {
+            font-family: var(--font-body);
+            font-size: 17px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .footer-logo-icon .bar {
+            width: 24px;
+            height: 2.5px;
+            background: var(--coral);
+            border-radius: 1px;
+            margin-top: 3px;
+        }
+
+        .footer-logo-divider {
+            width: 1px;
+            height: 42px;
+            background: rgba(255,255,255,0.2);
+        }
+
+        .footer-logo-text {
+            display: flex;
+            flex-direction: column;
         }
 
         .footer-logo {
             font-family: var(--font-heading);
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 600;
-        }
-
-        .footer-logo span {
-            color: var(--coral);
-        }
-
-        .footer-line {
-            width: 140px;
-            height: 2px;
-            background: var(--coral);
+            color: white;
+            line-height: 1.1;
         }
 
         .footer-tagline {
-            font-size: 0.65rem;
-            font-weight: 500;
-            color: rgba(255,255,255,0.6);
-            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .footer-tagline span {
+            font-size: 0.55rem;
+            font-weight: 600;
+            color: var(--coral);
+            letter-spacing: 1.5px;
             text-transform: uppercase;
+        }
+
+        .footer-tagline .dot {
+            width: 4px;
+            height: 4px;
+            background: var(--teal-bright);
+            border-radius: 50%;
         }
 
         .footer-social {
@@ -2118,9 +2204,19 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <div class="logo-name"><span class="first">Ruchi</span><span class="last">Gurnani</span></div>
-                <div class="logo-line"></div>
-                <div class="logo-tagline">Nutrition & Wellness Coach</div>
+                <div class="logo-icon">
+                    <span class="initials">RG</span>
+                    <div class="bar"></div>
+                </div>
+                <div class="logo-divider"></div>
+                <div class="logo-text">
+                    <div class="logo-name">Ruchi Gurnani</div>
+                    <div class="logo-tagline">
+                        <span>Nutritionist</span>
+                        <div class="dot"></div>
+                        <span>Wellness Coach</span>
+                    </div>
+                </div>
             </a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -2781,9 +2877,19 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-logo-wrap">
-                    <div class="footer-logo">Ruchi<span>Gurnani</span></div>
-                    <div class="footer-line"></div>
-                    <div class="footer-tagline">Nutrition & Wellness Coach</div>
+                    <div class="footer-logo-icon">
+                        <span class="initials">RG</span>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="footer-logo-divider"></div>
+                    <div class="footer-logo-text">
+                        <div class="footer-logo">Ruchi Gurnani</div>
+                        <div class="footer-tagline">
+                            <span>Nutritionist</span>
+                            <div class="dot"></div>
+                            <span>Wellness Coach</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="footer-social">
                     <a href="https://instagram.com/nutritionistruchigurnani" target="_blank" class="social-link" aria-label="Instagram">
