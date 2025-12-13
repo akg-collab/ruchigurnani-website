@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 80">
+  <!-- Main Name -->
+  <text x="250" y="45" font-family="Julius Sans One, sans-serif" font-size="42" fill="#0a5858" text-anchor="middle" letter-spacing="10">RUCHI GURNANI</text>
+
+  <!-- Decorative line left -->
+  <line x1="60" y1="65" x2="120" y2="65" stroke="#dddddd" stroke-width="1"/>
+
+  <!-- Nutritionist -->
+  <text x="175" y="68" font-family="Source Sans 3, sans-serif" font-size="10" fill="#ff5533" letter-spacing="3">NUTRITIONIST</text>
+
+  <!-- Dot separator -->
+  <circle cx="250" cy="65" r="2.5" fill="#15b3b3"/>
+
+  <!-- Wellness Coach -->
+  <text x="270" y="68" font-family="Source Sans 3, sans-serif" font-size="10" fill="#ff5533" letter-spacing="3">WELLNESS COACH</text>
+
+  <!-- Decorative line right -->
+  <line x1="380" y1="65" x2="440" y2="65" stroke="#dddddd" stroke-width="1"/>
+</svg>
