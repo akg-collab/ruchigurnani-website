@@ -174,15 +174,13 @@
             --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Scroll animation classes - applied via CSS to prevent CLS */
+        /* Scroll animation classes - opacity only to prevent CLS */
         .scroll-animate {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transition: opacity 0.6s ease;
         }
         .scroll-animate.visible {
             opacity: 1;
-            transform: translateY(0);
         }
 
         * {
@@ -571,7 +569,8 @@
             color: var(--teal-deep);
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
             margin-bottom: 1.5rem;
-            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
         }
 
         .hero-badge::before {
@@ -584,7 +583,7 @@
 
         .hero h1 {
             margin-bottom: 1.5rem;
-            animation: fadeInUp 0.8s ease 0.1s forwards;
+            animation: fadeIn 0.8s ease 0.1s forwards;
             opacity: 0;
         }
 
@@ -598,7 +597,7 @@
             color: var(--gray-warm);
             margin-bottom: 2rem;
             max-width: 480px;
-            animation: fadeInUp 0.8s ease 0.2s forwards;
+            animation: fadeIn 0.8s ease 0.2s forwards;
             opacity: 0;
         }
 
@@ -606,7 +605,7 @@
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.3s forwards;
+            animation: fadeIn 0.8s ease 0.3s forwards;
             opacity: 0;
         }
 
@@ -658,17 +657,6 @@
             opacity: 0.5;
             z-index: -1;
             background: linear-gradient(135deg, rgba(255, 107, 74, 0.1) 0%, transparent 100%);
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         @keyframes fadeIn {
