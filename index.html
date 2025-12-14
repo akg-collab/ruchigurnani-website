@@ -132,9 +132,10 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 
-    <!-- Fonts -->
+    <!-- Fonts - Preload critical fonts to reduce CLS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Sans:wght@400;500&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Julius+Sans+One&display=swap" rel="stylesheet">
 
     <style>
@@ -170,6 +171,17 @@
 
             /* Transitions */
             --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Scroll animation classes - applied via CSS to prevent CLS */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         * {
@@ -2366,6 +2378,7 @@
         <a href="https://wa.me/919560958866" class="btn btn-primary">WhatsApp Me</a>
     </div>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-blob hero-blob-1"></div>
@@ -2986,12 +2999,13 @@
                     </div>
 
                     <div class="map-wrapper">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28019.54188289!2d77.1!3d28.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d038c0f2c3c8f%3A0x3c0e4c3e3c3e3c3e!2sShivaji%20Marg%2C%20Delhi!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28019.54188289!2d77.1!3d28.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d038c0f2c3c8f%3A0x3c0e4c3e3c3e3c3e!2sShivaji%20Marg%2C%20Delhi!5e0!3m2!1sen!2sin!4v1234567890" title="Ruchi Gurnani Location - Shivaji Marg, Delhi" width="400" height="200" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -3099,17 +3113,14 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('visible');
                 }
             });
         }, observerOptions);
 
-        // Observe elements for scroll animations
+        // Observe elements for scroll animations (using CSS classes to prevent CLS)
         document.querySelectorAll('.service-card, .wyg-card, .testimonial-card, .media-card, .hiw-step').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            el.classList.add('scroll-animate');
             observer.observe(el);
         });
 
