@@ -568,11 +568,13 @@
             gap: 4rem;
             align-items: center;
             padding-top: 80px;
+            contain: layout style;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
+            min-height: 350px; /* Reserve space to prevent CLS */
         }
 
         .hero-badge {
