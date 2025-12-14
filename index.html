@@ -575,6 +575,7 @@
             position: relative;
             z-index: 2;
             min-height: 350px; /* Reserve space to prevent CLS */
+            order: 1; /* Text first on desktop */
         }
 
         .hero-badge {
@@ -634,6 +635,7 @@
             z-index: 2;
             opacity: 0;
             animation: fadeIn 0.8s ease 0.2s forwards;
+            order: 2; /* Image second on desktop */
         }
 
         .hero-image {
@@ -2215,10 +2217,11 @@
             }
 
             .hero-content {
-                /* Removed order swap to reduce CLS */
+                order: unset; /* Reset to HTML order on mobile */
             }
 
             .hero-image-wrapper {
+                order: unset; /* Reset to HTML order on mobile (image first) */
                 max-width: 400px;
                 margin: 0 auto;
             }
@@ -2395,6 +2398,11 @@
         <div class="hero-blob hero-blob-3"></div>
 
         <div class="hero-container">
+            <div class="hero-image-wrapper">
+                <div class="hero-image">
+                    <img src="Pictures/hero.webp" alt="Ruchi Gurnani - Nutritionist & Wellness Coach" width="800" height="800" fetchpriority="high">
+                </div>
+            </div>
             <div class="hero-content">
                 <div class="hero-badge">Celebrity Nutritionist & Wellness Coach</div>
                 <h1>Personalized Plans.<br><span class="highlight">Proven Results.</span></h1>
@@ -2405,11 +2413,6 @@
                         Get Your Personalized Plan
                     </a>
                     <a href="#about" class="btn btn-secondary">Learn More</a>
-                </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <div class="hero-image">
-                    <img src="Pictures/hero.webp" alt="Ruchi Gurnani - Nutritionist & Wellness Coach" width="800" height="800" fetchpriority="high">
                 </div>
             </div>
         </div>
