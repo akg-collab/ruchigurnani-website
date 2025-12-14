@@ -589,6 +589,8 @@
             color: var(--teal-deep);
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
             margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
         }
 
         .hero-badge::before {
@@ -601,6 +603,8 @@
 
         .hero h1 {
             margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeIn 0.6s ease 0.1s forwards;
         }
 
         .hero h1 .highlight {
@@ -613,17 +617,23 @@
             color: var(--gray-warm);
             margin-bottom: 2rem;
             max-width: 480px;
+            opacity: 0;
+            animation: fadeIn 0.6s ease 0.2s forwards;
         }
 
         .hero-ctas {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeIn 0.6s ease 0.3s forwards;
         }
 
         .hero-image-wrapper {
             position: relative;
             z-index: 2;
+            opacity: 0;
+            animation: fadeIn 0.8s ease 0.2s forwards;
         }
 
         .hero-image {
