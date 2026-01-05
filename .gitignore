@@ -5,3 +5,9 @@
 Plans/
 *.md
 !README.md
+
+# Dev files
+design-preview.html
+design-final-preview.html
+features.json
+desktop.ini
